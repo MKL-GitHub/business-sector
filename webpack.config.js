@@ -12,7 +12,7 @@ let config = {
     filename: '[name].js', // Шаблон для названия файлов
     clean: true, // Очистить ./dist перед сборкой
   },
-  mode: process.env.NODE_ENV,
+  mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx'], // расширения по умолчанию если не указаны в import
     modules: ['./', 'node_modules'], // Где искать файлы подключаемых модулей (пакетов)
