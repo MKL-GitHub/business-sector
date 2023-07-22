@@ -1,0 +1,89 @@
+.Pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.0625rem;
+
+  &-sideButtons {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #474955;
+    padding: 0 2rem;
+
+    &:hover {
+      border-radius: 1rem;
+      background-color: #00000010;
+    }
+  }
+
+  &-pageButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2342rem;
+    height: 80%;
+  }
+
+  &-pageButton {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #474955;
+    padding: 0 0.3rem;
+
+    &_current {
+      color: #7ebc3c;
+    }
+
+    &:hover {
+      border-radius: 0.5rem;
+      background-color: #00000010;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .Pagination {
+    &-sideButtons {
+      font-size: 1.35rem;
+      padding: 0 1.5rem;
+    }
+
+    &-pageButtons {
+      gap: 0.1rem;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .Pagination {
+    &-sideButtons {
+      font-size: 1.28rem;
+      padding: 0 1.3rem;
+    }
+
+    &-pageButtons {
+      gap: 0.05rem;
+    }
+
+    &-pageButton {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Pagination {
+    &-sideButtons {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+
+    &-pageButtons {
+      gap: 0rem;
+    }
+
+    &-pageButton {
+      font-size: 0.8rem;
+    }
+  }
+}

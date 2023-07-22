@@ -1,0 +1,18 @@
+.Layout {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 1.4375rem 4.875rem;
+  min-height: 100vh;
+}
+
+@media (max-width: 1000px) {
+  .Layout {
+    padding: 1.4375rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Layout {
+    padding: 1rem 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+.PostsTable {
+  border-collapse: collapse;
+
+  & > thead {
+    background-color: #474955;
+    height: 3.375rem;
+    border: 1px solid #474955;
+    color: white;
+    font-size: 0.875rem;
+    border-top: none;
+
+    & * {
+      font-weight: 600;
+    }
+
+    & th {
+      &:hover {
+        background-color: #00000020;
+      }
+    }
+  }
+
+  &-sortImg {
+    margin-left: 1.4rem;
+    user-select: none;
+  }
+
+  &-thId {
+    width: 6.875rem;
+  }
+
+  &-thTitle {
+    width: 33.0625rem;
+  }
+
+  &-thBody {
+    width: 27rem;
+  }
+
+  & > tbody {
+    & * {
+      border: 1px solid #e3e6ec;
+    }
+
+    & td {
+      padding: 0.875rem 0.6875rem;
+      font-size: 0.8125rem;
+    }
+  }
+
+  &-tdId {
+    text-align: center;
+  }
+
+  &_isNotAscending img {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .PostsTable {
+    &-sortImg {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .PostsTable {
+    &-sortImg {
+      margin-left: 0.5rem;
+    }
+  }
+}
