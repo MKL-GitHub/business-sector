@@ -1,4 +1,3 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -22,6 +21,12 @@ let config = {
       '@store': path.resolve(__dirname, 'src/store'),
       '@utils': path.resolve(__dirname, 'src/utils'),
     },
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    port: 3000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -63,15 +68,6 @@ let config = {
       },
     }),
   ],
-}
-
-if (process.env.NODE_ENV === 'development') {
-  config.devtool = 'inline-source-map';
-  config.devServer = {
-    static: path.join(__dirname, 'dist'),
-    port: 3000,
-    historyApiFallback: true,
-  };
 }
 
 module.exports = config;
