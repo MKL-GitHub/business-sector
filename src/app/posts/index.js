@@ -32,11 +32,12 @@ function Posts() {
       ? a[select.sortParams.prop].localeCompare(b[select.sortParams.prop])
       : b[select.sortParams.prop].localeCompare(a[select.sortParams.prop]);
 
+    const search = select.params.search.toLowerCase();
     const posts = select.data
       .filter(post =>
-        `${post.id}`.toLowerCase().includes(select.params.search) ||
-        post.title.toLowerCase().includes(select.params.search) ||
-        post.body.toLowerCase().includes(select.params.search)
+        `${post.id}`.toLowerCase().includes(search) ||
+        post.title.toLowerCase().includes(search) ||
+        post.body.toLowerCase().includes(search)
       )
       .sort((a, b) => select.sortParams.prop === 'id'
         ? sortByNumber(a, b)

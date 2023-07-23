@@ -1,6 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 const path = require("path");
 
 let config = {
@@ -61,11 +60,6 @@ let config = {
       filename: './index.html',
       title: 'Сектор бизнеса',
       base: '/',
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      },
     }),
   ],
 }
